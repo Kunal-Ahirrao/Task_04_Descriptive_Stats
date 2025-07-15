@@ -1,68 +1,82 @@
-# 📊 Task_04_Descriptive_Stats
+# 📊 Task_04_Descriptive_Stats – Modeling Summary
 
-This project performs descriptive statistical analysis on three real-world datasets related to the **2024 U.S. presidential election and political social media activity**, using three different methods:
+This README provides a summary of the **descriptive modeling work** completed on three datasets related to the **2024 U.S. presidential election social media activity**, using three distinct approaches:
 
-- ✅ Pure Python (no third-party libraries)
-- ✅ Pandas
-- ✅ Polars
-
-Each approach is applied across all datasets, and results are exported as `.txt` files for consistency and reporting.
+- **Pure Python**: Manual computations using built-in functions  
+- **Pandas**: High-level, efficient analysis  
+- **Polars**: Fast and lightweight DataFrame manipulation  
 
 ---
 
-## 📁 Datasets Used
+## 📁 Datasets Modeled
 
-> ⚠️ **NOTE**: Datasets are not included in this repository per project instructions.  
-> Please download the following datasets manually before running the code:
-
-1. `2024_fb_ads_president_scored_anon.csv` – Facebook ad campaigns  
-2. `2024_fb_posts_president_scored_anon.csv` – Facebook organic posts  
-3. `2024_tw_posts_president_scored_anon.csv` – Twitter posts  
+1. **Facebook Ads** → `2024_fb_ads_president_scored_anon.csv`  
+2. **Facebook Posts** → `2024_fb_posts_president_scored_anon.csv`  
+3. **Twitter Posts** → `2024_tw_posts_president_scored_anon.csv`  
 
 ---
 
-## 🧠 Repository Structure
+## 🛠️ Modeling Steps per Dataset
 
-Task_04_Descriptive_Stats/
-│
-├── pandas_stats_ads.py/
-├── pandas_stats_fb_posts.py/
-├── pandas_stats_twitter.py/
-│
-├── polars_stats_ads.py/
-├── polars_stats_fb_posts.py/
-├── polars_stats_twitter.py/
-│
-├── pure_python_stats_ads.py/
-├── pure_python_stats_fb_posts.py/
-├── pure_python_stats_twitter.py/
-│
-├── output/
-│
-└── README.md/
+Each modeling script completes the following tasks:
 
-## ⚙️ How to Run
+1. **Data Inspection**
+   - Print column names and data types  
+2. **Cleaning (if needed)**
+   - Fix formatting (e.g., remove commas from numeric strings)  
+3. **Descriptive Statistics**
+   - Count, Mean, Min, Max, Std  
+4. **Group-based Analysis**
+   - By account/page ID  
+   - By account ID + post/ad ID  
 
-Make sure the corresponding `.csv` dataset is in your working directory. Then run each script based on the method you want to test.
+---
 
-### ▶️ Pandas Scripts
+## 🧪 Model Variants
 
-python pandas_stats_ads.py/
-python pandas_stats_fb_posts.py/
-python pandas_stats_twitter.py/
+| Library       | Script Example                  | Output Example                |
+|---------------|----------------------------------|-------------------------------|
+| Pure Python   | `pure_python_stats_ads.py`       | `pure_python_output_ads.txt` |
+| Pandas        | `pandas_stats_posts.py`          | `pandas_output_posts.txt`    |
+| Polars        | `polars_stats_twitter.py`        | `polars_output_twitter.txt`  |
 
-⚡ Polars Scripts/
-python polars_stats_ads.py/
-python polars_stats_fb_posts.py/
-python polars_stats_twitter.py/
+All scripts export output summaries to `.txt` files for review and submission.
 
-🧪 Pure Python Scripts/
-python pure_python_stats_ads.py/
-python pure_python_stats_fb_posts.py/
-python pure_python_stats_twitter.py/
+---
 
-👨‍💻 Author
-Kunal Ahirrao/
-Master’s in Applied Data Science/
-Syracuse University/
-LinkedIn | GitHub
+## 📊 Output Fields Summary
+
+For numeric fields such as:
+
+- `estimated_audience_size`  
+- `estimated_impressions`  
+- `estimated_spend`  
+- `likes`, `comments`, `shares`, etc. (in posts/tweets)  
+
+We compute:
+
+- Count  
+- Mean  
+- Standard Deviation  
+- Minimum and Maximum  
+- Group-wise Mean (Top 10 samples)  
+
+---
+
+
+---
+
+## ✅ Conclusion
+
+This modeling workflow provides a reproducible baseline for exploring political ad engagement and organic post trends across platforms. Output files are ready for inspection and reporting.
+
+---
+
+## 👨‍💻 Author
+
+**Kunal Ahirrao**  
+Master’s in Applied Data Science  
+Syracuse University  
+[LinkedIn]([https://www.linkedin.com](https://www.linkedin.com/in/kunal-ahirrao/)) 
+
+
